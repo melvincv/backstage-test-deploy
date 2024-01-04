@@ -5,7 +5,7 @@ metadata:
   name: backstage
   namespace: backstage
 spec:
-  type: ClusterIP
+  type: NodePort
   elector:
     app: backstage
   ports:
