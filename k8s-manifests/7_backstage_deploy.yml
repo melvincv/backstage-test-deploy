@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: backstage
-          image: melvincv/backstage:1.1.0
+          image: melvincv/backstage:1.1.1
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
@@ -26,11 +26,6 @@ spec:
                 name: postgres-secrets
             - secretRef:
                 name: backstage-secrets
-          env:
-          - name: POSTGRES_PORT
-            value: "5432"
-          - name: POSTGRES_HOST
-            value: "postgres.backstage.svc.cluster.local"
 # Uncomment if health checks are enabled in your app:
 # https://backstage.io/docs/plugins/observability#health-checks
 #          readinessProbe:
